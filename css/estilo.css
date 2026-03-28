@@ -1,0 +1,94 @@
+:root {
+  --azul: #2E6DA4;
+  --verde: #1E7B4B;
+  --vermelho: #C0392B;
+  --radius: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--radius);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  padding: 0.75rem;
+  border: 2px solid #dde1e7;
+  border-radius: var(--radius);
+  transition: 0.3s;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--azul);
+}
+
+input.error {
+  border-color: var(--vermelho);
+  background: #fff5f5;
+}
+
+input.success {
+  border-color: var(--verde);
+  background: #f0fff4;
+}
+
+.error-msg {
+  color: var(--vermelho);
+  font-size: 0.85rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--azul);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+.strength-bar {
+  height: 6px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#strength {
+  height: 100%;
+  width: 0%;
+  transition: 0.3s;
+}
+
+#sucesso {
+  margin-top: 1rem;
+  color: var(--verde);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+}
